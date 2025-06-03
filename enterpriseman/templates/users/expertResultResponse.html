@@ -1,0 +1,25 @@
+{% extends 'users/user_base.html' %}
+
+{% block content %}
+<div class="row mt-5">
+    <h1 class="text-center text-primary"><u>WARNING</u></h1>
+    <center>
+       {% if status == 'safe' %}
+        <h2>Your Health is Good</h2>
+        {% else %}
+        <h3></h3>
+               <h3>Our Expert System Says Your Health Condition Is,<span style='color:red;'> NOT GOOD </span></h3>
+        <h2>Do you want visit our consult doctor Book an appointment</h2>
+        
+        
+
+                    {% comment %} <a class="nav-link text-white" href="">consult</a> {% endcomment %}
+                    <a href="{% url 'makeappointment' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline"><u>Make anAppointment</span></u></a>
+                   
+
+
+
+                {% endif %}
+    </center>
+</div>
+{% endblock %}

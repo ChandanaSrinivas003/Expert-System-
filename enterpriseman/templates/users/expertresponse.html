@@ -1,0 +1,39 @@
+{% extends 'users/user_base.html' %}
+
+
+{% block content %}
+<h2 style='color:rgb(70, 190, 125)'><center><u>Here is your Diagnostic Centre.</u></center></h2>
+<h3><center>Follow our ExpertResponse suggestion.Stay Safe</center></h3>
+<h3><center><u>NOTE</u>:--Follow only your's ExpertResponse by our Expertsystem</center></h3>
+    <table class="table" style="color:white;">
+        <thead>
+            <tr>
+                <th scope="col">S.NO</th>
+                <th scope="col">NAME</th>
+                <th scope="col">DOCTOR</th>
+                <th scope="col">DISEASE</th>
+                <th scope="col">Expert Response</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in data %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ user.name}}</td>
+                <td>{{ user.doctor}}</td>
+                <td>{{ user.disease}}</td>
+               <td> {{user.suggestion}}</td>
+{% comment %} 
+                {% if user.status == 'waiting' %}
+                <td>
+                    <a href="/AdminActivaUsers/?uid={{ user.id }}">Activate</a>
+                </td>
+                {% else %}
+                <td> Activated</td>
+                {% endif %} {% endcomment %}
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

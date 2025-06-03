@@ -1,0 +1,17 @@
+{% extends 'users/user_base.html' %}
+
+{% block content %}
+<style>
+    span{
+        color='orange'
+        
+        }
+    
+</style>
+<center>
+    <top>
+      <h1 class="mt-3" style='color:rgb(70, 190, 125)'>Welcome {{request.session.loggeduser|title}}</h1>
+      <h2 class="mt-3" style='color:sliver'>You Can Call Our Expert API Here & Can Check Your Health Condition By Clicking On Expertsystem</h2>
+    </top>  
+    </center>
+{% endblock %}

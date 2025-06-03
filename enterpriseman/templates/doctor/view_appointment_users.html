@@ -1,0 +1,43 @@
+{% extends 'doctor/doctor_base.html' %}
+
+{% block content %}
+<h2><center><u>Appointment List</u></center></h2>
+    <table class="table" style="color:white;">
+        <thead>
+            <tr>
+                <th scope="col">Sno</th>
+                <th scope="col">NAME</th>
+                <th scope="col">E-MAIL</th>
+                <th scope="col">PHONE</th>
+                <th scope="col">DATE</th>
+                <th scope="col">DOCTOR</th>
+                <th scope="col">DISEASE</th>
+                <th scope="col">ADD SUGGESTIONS</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in data %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ user.name}}</td>
+                <td>{{ user.email}}</td>
+
+                <td>{{ user.phone}}</td>
+                <td>{{ user.date}}</td>
+                <td>{{ user.doctor}}</td>
+                <td>{{ user.disease}}</td>
+               <td> <a href="/AddingSuggestions/?id={{ user.id }}">Add Suggestion</a></td>
+{% comment %} 
+                {% if user.status == 'waiting' %}
+                <td>
+                    <a href="/AdminActivaUsers/?uid={{ user.id }}">Activate</a>
+                </td>
+                {% else %}
+                <td> Activated</td>
+                {% endif %} {% endcomment %}
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endblock %}

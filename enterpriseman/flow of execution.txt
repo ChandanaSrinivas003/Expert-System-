@@ -1,0 +1,26 @@
+NOTE:- 
+This project has an Application called EXPERTSYSTEM
+-Before executing this project you must run(command is python main.py) EXPERTSYSTEM to genrate Token
+--------------------------------------------------------------------------------------------------
+now open the code and start executing 
+-runserver the server in new command shell  you will get an http port number by clicking on that port number(or)copy port number and paste in googlechrome
+-now you are redirected to home page
+-first you need to register by clicking on signup
+-once you are register succefully wait for your activation which will do by the admin
+-now open admin.with defualt userid-admin password-admin
+-now you will enter into admin page and click on userregistered list and click on activate the your account gets activate and user will get access to login
+-user:-now login with your genrated userid and Password
+after login token will be genrated in cmd 
+-you will enter into userhome page now click on EXPERTSYSTEM which is your CRM application
+-- their you can check your health condition by our EXPERTSYSTEM By fillings all fields
+-now Expertsystem gives result as health is good or notgood based on your given fileds
+-if result is notgood you can consult to doctor  
+-to consult doctor make an appointment by clicking on make an appointment
+-your are redirected to make appointment page their you can book your appointment and will sent to our doctor
+-now go to doctor login and the doctor will check the appointment list and add suggestions to the user
+-after that go to user login page and user can check ExpertResponse which is given by our Expersystem Doctor.
+
+
+ 
+
+ 
